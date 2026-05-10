@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spinshot Drill Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+  <header>
+    <h1>Spinshot Drills</h1>
+    <input id="searchInput" type="text" placeholder="Search drills..." />
+  </header>
+
+  <main id="drillList"></main>
+
+  <button id="addDrillBtn" class="fab">+</button>
+
+  <div id="editorModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="editorTitle">New Drill</h2>
+
+      <label>Name</label>
+      <input id="drillName" type="text" />
+
+      <label>Notes</label>
+      <textarea id="drillNotes"></textarea>
+
+      <h3>Shots</h3>
+      <div id="shotList"></div>
+
+      <button id="addShotBtn" class="secondary">Add Shot</button>
+
+      <div class="modal-actions">
+        <button id="saveDrillBtn" class="primary">Save</button>
+        <button id="cancelBtn" class="danger">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
