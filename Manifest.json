@@ -1,0 +1,20 @@
+{
+  "name": "Spinshot Drill Manager",
+  "short_name": "Spinshot Drill Manager",
+  "start_url": "https://gemini900.github.io/spinshot-drill-manager/index.html",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#0078ff",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
