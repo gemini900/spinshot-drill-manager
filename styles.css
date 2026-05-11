@@ -1,19 +1,130 @@
+/* ===== Base Layout ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.container {
+  padding: 15px;
+}
+
+input, select, textarea, button {
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* ===== Drill Cards ===== */
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #eef3ff;
+}
+
+/* ===== Buttons ===== */
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button.danger {
+  background: #e74c3c;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}
+
+/* ===== Modal ===== */
+
+.hidden {
+  display: none;
+}
+
+#editorModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ===== 6‑Ball Grid Layout ===== */
+
 .shot-row {
   display: grid;
   grid-template-columns: 70px repeat(5, 1fr);
   gap: 6px;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .shot-ball-label {
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .shot-row select {
   width: 100%;
   padding: 6px;
-  font-size: 0.85rem;
-  border-radius: 4px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+}
+
+/* Make disabled marker options look like labels */
+.shot-row select option:disabled {
+  color: #777;
+  font-weight: bold;
+  background: #e8e8e8;
+}
+
+/* ===== Textarea ===== */
+
+textarea {
+  width: 100%;
+  height: 80px;
+  resize: vertical;
 }
