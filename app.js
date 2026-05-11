@@ -195,14 +195,25 @@ function closeEditor() {
   document.getElementById("editorModal").classList.add("hidden");
 }
 
-// Event listeners
-document.getElementById("addDrillBtn").onclick = () => openEditor();
-document.getElementById("saveDrillBtn").onclick = () => saveDrill();
-document.getElementById("cancelBtn").onclick = () => closeEditor();
-document.getElementById("searchInput").oninput = () => renderDrills();
+// Wait for DOM to be ready before attaching listeners
+document.addEventListener("DOMContentLoaded", function() {
+  // Event listeners
+  document.getElementById("addDrillBtn").addEventListener("click", () => openEditor());
+  document.getElementById("saveDrillBtn").addEventListener("click", () => saveDrill());
+  document.getElementById("cancelBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeEditor();
+  });
+  document.getElementById("searchInput").addEventListener("input", () => renderDrills());
+  
+  // Close modal when clicking on overlay
+  document.getElementById("modalOverlay").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeEditor();
+  });
 
-// Close modal when clicking on overlay
-document.getElementById("modalOverlay").onclick = () => closeEditor();
-
-// Init
-loadDrills();
+  // Init
+  loadDrills();
+});
