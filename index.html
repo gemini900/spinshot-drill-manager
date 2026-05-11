@@ -6,50 +6,51 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>Spinshot Drills</header>
 
-  <div class="container">
-    <!-- Top bar: search + plus button -->
-    <div style="display:flex; gap:8px; margin-bottom:12px;">
-      <input
-        id="searchInput"
-        type="text"
-        placeholder="Search drills..."
-        style="flex:1;"
-      >
-      <button id="addDrillBtn">+</button>
-    </div>
+<header>Spinshot Drills</header>
 
-    <!-- Drill list -->
-    <div id="drillList"></div>
+<div class="container">
+
+  <!-- Search + Add Drill -->
+  <div style="display:flex; gap:8px; margin-bottom:12px;">
+    <input id="searchInput" type="text" placeholder="Search drills..." style="flex:1;">
+    <button id="addDrillBtn">+</button>
   </div>
 
-  <!-- Editor modal -->
-  <div id="editorModal" class="hidden">
-    <div class="modal-content">
-      <h2 id="editorTitle">New Drill</h2>
+  <!-- Drill List -->
+  <div id="drillList"></div>
 
-      <div style="margin-bottom:10px;">
-        <label for="drillName">Name</label>
-        <input id="drillName" type="text" placeholder="Drill name">
-      </div>
+</div>
 
-      <div style="margin-bottom:10px;">
-        <label for="drillNotes">Notes</label>
-        <textarea id="drillNotes" placeholder="Notes"></textarea>
-      </div>
+<!-- Modal -->
+<div id="editorModal" class="hidden">
+  <div class="modal-content">
 
-      <h3>Shots</h3>
-      <!-- 6‑ball grid will be injected here by app.js -->
-      <div id="shotList"></div>
+    <h2 id="editorTitle">New Drill</h2>
 
-      <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:15px;">
-        <button id="saveDrillBtn">Save</button>
-        <button id="cancelBtn" class="danger">Cancel</button>
-      </div>
+    <div style="margin-bottom:10px;">
+      <label for="drillName">Name</label>
+      <input id="drillName" type="text" placeholder="Drill name">
     </div>
-  </div>
 
-  <script src="app.js"></script>
+    <div style="margin-bottom:10px;">
+      <label for="drillNotes">Notes</label>
+      <textarea id="drillNotes" placeholder="Notes"></textarea>
+    </div>
+
+    <h3>Shots</h3>
+
+    <!-- 6‑ball grid injected here -->
+    <div id="shotList"></div>
+
+    <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:15px;">
+      <button id="saveDrillBtn">Save</button>
+      <button id="cancelBtn" class="danger">Cancel</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
