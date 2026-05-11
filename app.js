@@ -201,5 +201,8 @@ document.getElementById("saveDrillBtn").onclick = () => saveDrill();
 document.getElementById("cancelBtn").onclick = () => closeEditor();
 document.getElementById("searchInput").oninput = () => renderDrills();
 
+// Close modal when clicking on overlay
+document.getElementById("modalOverlay").onclick = () => closeEditor();
+
 // Init
 loadDrills();
